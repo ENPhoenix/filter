@@ -1,0 +1,68 @@
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.portfolio {
+  width: 100%;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.toolbar__button {
+  background: #fff;
+  color: #333;
+  border: 1px solid #777;
+  border-radius: 2px;
+  padding: 6px 14px;
+  font-size: 14px;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toolbar__button:hover {
+  border-color: #111;
+  color: #111;
+}
+
+.toolbar__button.active {
+  background: #555;
+  color: #fff;
+  border-color: #555;
+}
+
+.project-list {
+  column-count: 3;
+  column-gap: 16px;
+}
+
+.project-list__item {
+  width: 100%;
+  margin: 0 0 16px;
+  display: block;
+  break-inside: avoid;
+}
+
+@media (max-width: 992px) {
+  .project-list {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  #root {
+    padding: 16px;
+  }
+
+  .project-list {
+    column-count: 1;
+  }
+}
